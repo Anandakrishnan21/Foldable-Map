@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mapImage {
+    background-image: linear-gradient(90deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0) 30%), url("/images/map2.jpg");
+    background-size: 300%;
+  }
+
+  .mapImage:nth-child(1) {
+    background-position: 0% 0%, 0%;
+  }
+
+  .mapImage:nth-child(2) {
+    background-position: 0% 33.3%, 50%;
+  }
+
+  .mapImage:nth-child(3) {
+    background-position: 0% 66.6%, 100%;
+  }
+
+}
+
+.outerDiv {
+  @apply grid aspect-video max-h-[80vh] w-full max-w-[600px] p-8 mx-auto
+}
+
+.innerDiv {
+  @apply grid grid-cols-3 aspect-video h-full w-full [grid-area:1/1]
+}
+
+.dragDiv {
+  @apply relative z-10 [grid-area:1/1] cursor-grab active:cursor-grabbing
+}
+
+.noiseDiv {
+  @apply overflow-hidden lg:h-[500px] flex flex-col items-center justify-center rounded-2xl [background:right_no-repeat_linear-gradient(84deg,_rgba(32,23,38,.9),_rgba(32,23,38,.4)),url(/images/noise.svg)]
+}
