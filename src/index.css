@@ -39,3 +39,7 @@
 .noiseDiv {
   @apply overflow-hidden lg:h-[500px] flex flex-col items-center justify-center rounded-2xl [background:right_no-repeat_linear-gradient(84deg,_rgba(32,23,38,.9),_rgba(32,23,38,.4)),url(/images/noise.svg)]
 }
+
+.dirPosition{
+  @apply absolute right-10 lg:right-96 transform -translate-y-1/2 flex justify-center items-center
+}
