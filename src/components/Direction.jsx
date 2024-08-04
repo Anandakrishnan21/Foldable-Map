@@ -22,7 +22,7 @@ function Direction({ xDrag }) {
   }, []);
 
   useEffect(() => {
-    const open = xDrag.on((currentX) => {
+    const open = xDrag.onChange((currentX) => {
       if (currentX != 0) {
         setIsHide(true);
         open();
